@@ -3,5 +3,28 @@
 .recent-investment {
     background-color: $background-color;
     padding: 1rem 1.5rem 1.5rem;
-    
+    &__header {
+        color: $white;
+        font-size: 1.9rem;
+        font-weight: light;
+        background-color: rgba($color: $background-color, $alpha: 0.1);
+    }
+    &__description {
+        &-text {
+            color: $white;
+            font-size: 3.8rem;
+            font-weight: light;
+        }
+        &-more {
+            width: 7.1rem;
+            height: 7.1rem;
+            border: 1px solid $white;
+            border-radius: 50%;
+            .text{
+                color: $white;
+                font-size: 2rem;
+                font-weight: light;
+            }
+        }
+    }
 }

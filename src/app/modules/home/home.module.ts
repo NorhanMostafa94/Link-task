@@ -2,18 +2,32 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './pages/home/home.component';
-import { RecentInvestmentComponent } from './components/recent-investment/recent-investment.component';
 
+import { HomeComponent } from './pages';
+import { RecentInvestmentComponent } from './components';
+import { TranslateModule } from '@ngx-translate/core';
+
+const BASEMODULES = [
+  CommonModule,
+  HomeRoutingModule,
+  TranslateModule
+]
+
+const COMPONENTS = [
+  RecentInvestmentComponent
+];
+
+const PAGES = [
+  HomeComponent
+]
 
 @NgModule({
   declarations: [
-    HomeComponent,
-    RecentInvestmentComponent
+    ...COMPONENTS,
+    ...PAGES
   ],
   imports: [
-    CommonModule,
-    HomeRoutingModule
+    ...BASEMODULES
   ]
 })
 export class HomeModule { }
