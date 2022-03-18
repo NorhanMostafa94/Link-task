@@ -1,0 +1,1 @@
+export { RecentInvestmentComponent } from './recent-investment/recent-investment.component';
