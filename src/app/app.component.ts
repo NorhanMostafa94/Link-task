@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ELang } from './core/enums/lang';
+import { TranslationService } from './core/services/translation/translation.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'link-task';
+
+  constructor(private translationService: TranslationService) {
+    this.translationService.init(ELang.ENGLISH);
+  }
 }
